@@ -2,8 +2,8 @@ class CreateLinks < ActiveRecord::Migration
   def self.up
     create_table :links do |t|
       t.string :url
-      t.string :description
-      t.belongs_to :blog
+      t.text :description
+      t.belongs_to :post
 
       t.timestamps
     end

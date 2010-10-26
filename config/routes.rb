@@ -1,8 +1,14 @@
 Blog::Application.routes.draw do
 
 namespace :admin do
-resources :posts
+  resources :posts do
+    resources :links
+  end
 end
+
+# URL's
+# /posts/1/links
+# /posts/1/links/2
 
 
   # The priority is based upon order of creation:
